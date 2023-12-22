@@ -2,11 +2,19 @@ package hello.itemservice.domain;
 
 import lombok.Data;
 
+import javax.persistence.*;
+
+import static javax.persistence.GenerationType.*;
+
 @Data
+@Entity
+//@Table(name = "item")
 public class Item {
 
+    @Id @GeneratedValue(strategy = IDENTITY)
     private Long id;
 
+    @Column(name = "item_name")
     private String itemName;
     private Integer price;
     private Integer quantity;
