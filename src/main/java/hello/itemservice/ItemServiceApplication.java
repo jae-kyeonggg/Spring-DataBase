@@ -15,7 +15,7 @@ import javax.sql.DataSource;
 
 
 @Slf4j
-@Import(QuerydslConfig.class)
+@Import(V2Config.class)
 @SpringBootApplication(scanBasePackages = "hello.itemservice.web")
 public class ItemServiceApplication {
 
